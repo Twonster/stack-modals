@@ -32,7 +32,7 @@ class StackModals<S extends ModalScheme = any> {
         const key = this.createUniqModalKey(name);
         const defaultProps = this.initialModalsState[name];
 
-        this.stack.set(key, Object.assign({}, defaultProps, {}, props))
+        this.stack.set(key, Object.assign({}, defaultProps, props))
 
         this.traps.add?.(this.stack)
         return key

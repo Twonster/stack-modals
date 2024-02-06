@@ -9,7 +9,11 @@
     "build": "tsc"
   },
   "keywords": [
-    "modals"
+    "modals",
+    "react",
+    "vue",
+    "modal-controller",
+    "controlled-modals"
   ],
   "author": "Twonster",
   "license": "MIT",
