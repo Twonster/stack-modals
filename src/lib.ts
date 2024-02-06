@@ -9,9 +9,11 @@ import type {
   ModalServiceOptions,
   ModalStack,
   UpdateModalFn,
-} from "./types";
-import { HandleModalTrapFn, ModalTraps } from "./types";
-import { generateUniqueId, createModal } from "./utils";
+  HandleModalTrapFn,
+  ModalTraps
+} from './types';
+
+import { generateUniqueId } from "./utils";
 
 class StackModals<S extends ModalScheme = any> {
   public constructor(
@@ -51,7 +53,7 @@ class StackModals<S extends ModalScheme = any> {
 
     for (const propsKey in props) {
       const target = props[propsKey];
-      if (!target) continue;
+      if (target === undefined) continue;
 
       targetModal[propsKey] = target;
     }
@@ -86,4 +88,4 @@ class StackModals<S extends ModalScheme = any> {
   };
 }
 
-export { StackModals, createModal };
+export { StackModals };
