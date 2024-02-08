@@ -1,4 +1,4 @@
-import {StackModals} from "./lib";
+import type {StackModals} from "./lib";
 
 export declare type DefaultModalName = string | number
 
@@ -51,3 +51,5 @@ export declare type ModalServiceOptions<Scheme extends ModalScheme> = {
 }
 
 export declare type StackModalState<C extends StackModals> = C extends StackModals<infer S> ? S : never;
+
+export default StackModals
