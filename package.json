@@ -1,10 +1,9 @@
 {
   "name": "stack-modals",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "ModalService is a versatile TypeScript library designed to manage modal windows efficiently in web applications. With a robust set of types and functions, it offers seamless integration for creating, updating, deleting, and handling modal windows. Utilize its flexible API and customizable event traps to streamline modal management within your projects. Ideal for developers seeking a reliable solution for modal window management in TypeScript-based web applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/Twonster/stack-modals"
