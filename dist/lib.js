@@ -1,4 +1,7 @@
-import { generateUniqueId } from "./utils";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StackModals = void 0;
+const utils_1 = require("./utils");
 class StackModals {
     constructor(defaultValues = {}, options = {}) {
         this.stack = new Map();
@@ -50,7 +53,7 @@ class StackModals {
             this.traps[name] = callback;
         };
         this.createUniqModalKey = (name) => {
-            const key = `${name}:${generateUniqueId()}`;
+            const key = `${name}:${(0, utils_1.generateUniqueId)()}`;
             if (this.stack.has(key)) {
                 return this.createUniqModalKey(name);
             }
@@ -62,4 +65,4 @@ class StackModals {
         }
     }
 }
-export { StackModals };
+exports.StackModals = StackModals;
