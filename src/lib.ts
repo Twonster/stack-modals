@@ -10,7 +10,7 @@ import type {
   ModalStack,
   UpdateModalFn,
   HandleModalTrapFn,
-  ModalTraps
+  ModalTraps, OpenModalFnResult
 } from './types';
 
 import { generateUniqueId } from "./utils";
@@ -83,8 +83,14 @@ class StackModals<S extends ModalScheme = any> {
     this.traps[name] = callback;
   };
 
-  private createUniqModalKey: CreateUniqModalKeyFn<S> = (name) => {
-    return `${name}:${generateUniqueId()}`;
+  private createUniqModalKey: CreateUniqModalKeyFn<S> = (name): OpenModalFnResult<S, typeof name> => {
+    const key = `${name}:${generateUniqueId()}` as OpenModalFnResult<S, typeof name>;
+
+    if (this.stack.has(key)) {
+      return this.createUniqModalKey(name)
+    }
+
+    return key
   };
 }
 
