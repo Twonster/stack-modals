@@ -10,7 +10,7 @@
     "url": "https://github.com/Twonster/stack-modals"
   },
   "scripts": {
-    "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+    "test": "npx jest",
     "build": "tsc --declaration"
   },
   "keywords": [
