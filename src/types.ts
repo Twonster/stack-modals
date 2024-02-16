@@ -51,5 +51,3 @@ export declare type ModalServiceOptions<Scheme extends ModalScheme> = {
 }
 
 export declare type StackModalState<C extends StackModals> = C extends StackModals<infer S> ? S : never;
-
-export default StackModals

@@ -22,4 +22,3 @@ export declare type ModalServiceOptions<Scheme extends ModalScheme> = {
     defaultTraps?: ModalTraps<Scheme>;
 };
 export declare type StackModalState<C extends StackModals> = C extends StackModals<infer S> ? S : never;
-export default StackModals;

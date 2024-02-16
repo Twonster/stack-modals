@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "npx jest",
-    "build": "npm test && tsc --declaration"
+    "build": "tsc --declaration && terser dist/lib.js -o dist/lib.min.js"
   },
   "keywords": [
     "modals",
@@ -22,6 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.12",
+    "terser": "^5.27.1",
     "ts-jest": "^29.1.2",
     "typescript": "^5.3.3"
   }
